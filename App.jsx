@@ -1,26 +1,26 @@
 import {Component} from 'react'
-import Clock from './components/Clock'
+import Clock from './components/Clock/index.jsx'
 
 import './App.css'
 
 class App extends Component {
-  state = {showClock: false}
-  onToggleButton = () => {
-    this.setState(prevState => {
-      const {showClock} = prevState
-      return {showClock: !showClock}
+  state = {
+    showClock: false
+  }
+  onToggleClock = () => {
+    this.setState( prevState => {
+      const { showClock } = prevState
+      return {
+        showClock: !showClock
+      }
     })
   }
   render() {
-    const {showClock} = this.state
+    const { showClock } = this.state
     return (
       <div className="app-container">
-        <button
-          type="button"
-          className="toggle-button"
-          onClick={this.onToggleButton}
-        >
-          {showClock ? 'Hide Clock' : 'Show Clock'}
+        <button onClick={ this.onToggleClock } type="button" className="toggle-button">
+          {showClock ? 'Show Clock' : 'Hide Clock'}
         </button>
         {showClock && <Clock />}
       </div>
