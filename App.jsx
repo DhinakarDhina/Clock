@@ -11,7 +11,7 @@ class App extends Component {
     this.setState( prevState => {
       const { showClock } = prevState
       return {
-        showClock: showClock
+        showClock:!showClock
       }
     })
   }
