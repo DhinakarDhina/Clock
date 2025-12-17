@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <button onClick={ this.onToggleClock } type="button" className="toggle-button">
-          {showClock ? 'Hide Clock' : 'show Clock'}
+          {showClock ? 'Show Clock' : 'Hide Clock'}
         </button>
         {showClock && <Clock />}
       </div>
